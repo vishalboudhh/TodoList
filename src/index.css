@@ -1,0 +1,147 @@
+body {
+  background-color: rgb(41, 40, 40);
+}
+
+.todo-list {
+  font-family: 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: aliceblue;
+}
+
+button {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.add-button {
+  background-color: greenyellow;
+}
+
+.add-button:hover {
+  background-color: rgb(145, 219, 34);
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.delete-button:hover {
+  background-color: rgb(218, 2, 2);
+}
+
+.move-button {
+  background-color: blueviolet;
+}
+
+.move-button:hover {
+  background-color: rgb(120, 28, 207);
+}
+
+input[type="text"] {
+  font-size: 1.6rem;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: rgb(50, 50, 50);
+}
+
+ol {
+  padding: 0;
+  list-style-type: none; /* Remove default numbering of ordered list */
+}
+
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: white;
+  border: 3px solid rgb(149, 145, 145);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure space between text and buttons */
+  gap: 10px; /* Add some space between buttons */
+}
+
+.text {
+  flex-grow: 1;
+  text-align: left; /* Align the text to the left */
+}
+
+.delete-button, .move-button {
+  padding: 8px 12px;
+  font-size: 1.4rem;
+}
+
+.edit-button{
+  background-color: greenyellow;
+}
+.edit-button:hover{
+  background-color: rgb(104, 172, 2);
+}
+.buttons {
+  display: flex;
+  gap: 5px; /* Add space between the buttons */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem; /* Reduce the size of the header */
+  }
+
+  li {
+    font-size: 1.8rem; /* Reduce the size of the text in list items */
+    padding: 10px; /* Adjust padding */
+    flex-direction: column; /* Stack text and buttons vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  button {
+    font-size: 1.4rem; /* Reduce button size */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  .buttons {
+    width: 100%; /* Make buttons full-width on small screens */
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 5px;
+    flex-wrap: wrap; /* Allow buttons to wrap in case of overflow */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem; /* Further reduce the size of the header */
+  }
+
+  input[type="text"] {
+    font-size: 1.4rem; /* Reduce the size of the input text */
+  }
+
+  li {
+    font-size: 1.5rem; /* Reduce the size of the text in list items */
+    padding: 8px; /* Further adjust padding */
+  }
+
+  button {
+    font-size: 1.2rem; /* Reduce button size more for smaller screens */
+    padding: 6px 12px; /* Adjust button padding */
+  }
+
+  .buttons {
+    justify-content: space-around; /* Spread buttons more evenly */
+    flex-wrap: wrap; /* Ensure buttons wrap on small devices */
+  }
+}
